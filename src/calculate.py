@@ -6,6 +6,7 @@ class Calculator:
             "mul": self.multiply,
             "div": self.divide,
             "mod": self.mod,
+            "toThe": self.toThe,
         }
 
     def calculate(self, operand1, operand2, operator):
@@ -39,6 +40,9 @@ class Calculator:
     
     def mod(self, x, y):
         return x % y
+
+    def toThe(self, x, y):
+        return x ** y
 
 
 
