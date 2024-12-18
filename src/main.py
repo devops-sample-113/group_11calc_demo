@@ -51,6 +51,11 @@ class CalculatorApp(ft.Container):
                             button_clicked=self.button_clicked,
                             operations="div",
                         ),
+                        OperatorButton(
+                            text="mod",
+                            button_clicked=self.button_clicked,
+                            operations="mod",
+                        )
                     ]
                 ),
                 ft.Row(
@@ -171,6 +176,11 @@ class CalculatorApp(ft.Container):
                     self.operand1, float(self.result.value), self.operator
                 )
             )
+            self.reset()
+        elif action == "backspace":
+            self.result.value = self.result.value[:-1]
+            if self.result.value == "":
+                self.result.value = "0"
             self.reset()
         else:
             raise ValueError("Invalid action")
