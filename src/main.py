@@ -55,7 +55,8 @@ class CalculatorApp(ft.Container):
                             text="mod",
                             button_clicked=self.button_clicked,
                             operations="mod",
-                        )
+                        ),
+                        
                     ]
                 ),
                 ft.Row(
@@ -69,6 +70,11 @@ class CalculatorApp(ft.Container):
                             text="9", button_clicked=self.button_clicked, value=9),
                         OperatorButton(
                             text="*", button_clicked=self.button_clicked, operations="mul"),
+                        OperatorButton(
+                            text="^",
+                            button_clicked=self.button_clicked,
+                            operations="toThe"
+                        )
                     ]
                 ),
                 ft.Row(
